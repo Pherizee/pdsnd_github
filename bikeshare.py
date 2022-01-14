@@ -335,7 +335,7 @@ def user_stats(df, city):
     start_time = time.time()
 
     # Display counts of user types
-    user_types = df.groupby(df['User Type'])['User Type'].count()
+    user_types = df['User Type'].value_counts()
     user_type_names = list(user_types.index)
     user_type_count = user_types.values
     print("The users are categorized as: ")
