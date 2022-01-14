@@ -44,6 +44,13 @@ def confirm_choice(city_filter, month_filter, day_filter):
     return choice
 
 def get_day():
+    """
+    Asks user to specify particular day to analyze
+
+    Returns:
+        (int) day - day of the week to be analyzed
+    """
+    
      # get user input for day of week (monday, tuesday, ... sunday)
     while True:
         try:
