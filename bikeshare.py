@@ -50,7 +50,7 @@ def get_day():
     Returns:
         (int) day - day of the week to be analyzed
     """
-    
+
      # get user input for day of week (monday, tuesday, ... sunday)
     while True:
         try:
@@ -68,6 +68,13 @@ def get_day():
     return day
 
 def get_month():
+    """
+    Asks user to specify particular month to analyze
+
+    Returns:
+        (int) month - month to be analyzed
+    """
+
      # get user input for month (january, february, ... , june)
     while True:
         try:
