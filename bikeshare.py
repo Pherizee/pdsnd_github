@@ -195,12 +195,12 @@ def print_common_month(df):
     month_count = df['Month'].value_counts().max()
     print('Well, {} has the most travels.\t Count: {}\n'.format(common_month, month_count))
 
-def print_common_dow(df):
+def print_common_day(df):
     """Display most common day of week of travel"""
 
-    common_dow = df['Day_of_week'].mode()[0]
-    dow_count = df['Day_of_week'].value_counts().max()
-    print('Most popular day is {}\t Count: {}\n'.format(common_dow, dow_count))
+    common_day = df['Day_of_week'].mode()[0]
+    day_count = df['Day_of_week'].value_counts().max()
+    print('Most popular day is {}\t Count: {}\n'.format(common_day, day_count))
 
 def print_common_hour(df):
     """Display most coomon hour of travel"""
@@ -222,15 +222,15 @@ def time_stats(df, filterby):
         print_common_month(df)
 
         # display the most common day of week
-        print_common_dow(df)
+        print_common_day(df)
 
         # display the most common start hour
         print_common_hour(df)
 
     # if the filter is applied to the month - all days included
     elif filterby == 'month':
-        # display the most common dow
-        print_common_dow(df)
+        # display the most common day
+        print_common_day(df)
 
         # display the most common start hour
         print_common_hour(df)
