@@ -344,7 +344,7 @@ def user_stats(df, city):
 
     if city != 'washington':
         # Display counts of gender
-        genders = df.groupby(df['Gender'])['Gender'].count()
+        genders = df['Gender'].value_counts()
         genders_list = list(genders.index)
         gender_count = genders.values
         print("\nThe users' gender stats are: ")
